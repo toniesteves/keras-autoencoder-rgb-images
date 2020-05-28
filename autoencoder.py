@@ -47,14 +47,14 @@ batch_size = 32
 train_datagen = ImageDataGenerator(rescale=1./255., data_format='channels_last')
 train_generator = train_datagen.flow_from_directory(
   train_dir,
-  target_size=(80, 80),
+  target_size=(224, 224),
   batch_size=batch_size,
   class_mode='input')
 
 test_datagen = ImageDataGenerator(rescale=1./255., data_format='channels_last')
 validation_generator = test_datagen.flow_from_directory(
   train_dir,
-  target_size=(80, 80),
+  target_size=(224, 224),
   batch_size=batch_size,
   class_mode='input')
     
